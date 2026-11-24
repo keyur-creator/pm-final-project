@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Priya’s Future-State Journey Map</title>
+<style>
+:root{--bg:#F2F4F7;--card:#FFFFFF;--ink:#14213D;--muted:#58627A;--line:#CBD3DE;--good:#13695C;--goodbg:#E3F2EF;--pain:#9B2335;--painbg:#F9E8EA;--accent:#14213D;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+@media (prefers-color-scheme:dark){:root{--bg:#0F1522;--card:#18202F;--ink:#E8ECF4;--muted:#A3AEC5;--line:#2E3950;--good:#6CD0BE;--goodbg:#14312D;--pain:#F19AA8;--painbg:#3A1A21;--accent:#E8ECF4}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans);padding:32px 20px 48px}
+.wrap{max-width:1120px;margin:0 auto}
+h1,h2,h3{font-family:var(--serif);font-weight:600;margin:0}
+h1{font-size:clamp(26px,4vw,38px);line-height:1.15;letter-spacing:-.01em}
+.lede{color:var(--muted);max-width:68ch;margin:10px 0 0}
+.persona{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.box h2{font-size:18px;margin-bottom:6px}
+.box p{margin:4px 0;color:var(--muted);font-size:15px}
+.box p b{color:var(--ink);font-weight:600}
+blockquote{margin:10px 0 0;padding:0 0 0 14px;border-left:3px solid var(--pain);font-family:var(--serif);font-size:16px;color:var(--ink)}
+.curve{position:relative;height:150px;margin:8px 0 0;border-bottom:1px dashed var(--line)}
+.curve svg{position:absolute;inset:0;width:100%;height:100%}
+.curve .dot{position:absolute;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--good);border:2px solid var(--card)}
+.curve .dot.now{background:var(--pain)}
+.curve .tag{position:absolute;transform:translate(-50%,-26px);font-size:13px;font-weight:600;white-space:nowrap}
+.curve .tag.now{color:var(--pain);transform:translate(0,-26px)}
+.curvehead{display:flex;justify-content:space-between;align-items:baseline;margin-top:28px}
+.curvehead h2{font-size:20px}
+.curvehead span{color:var(--muted);font-size:14px}
+.map{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:14px}
+.stage{display:grid;grid-row:span 4;grid-template-rows:subgrid;gap:10px}
+.cell{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.cell h3{font-size:19px}
+.cell .sub{color:var(--muted);font-size:14px;margin:2px 0 0}
+.stage .head{background:var(--accent);border-color:var(--accent)}
+.stage .head h3,.stage .head .sub{color:var(--bg)}
+.stage .head .sub{opacity:.8}
+.lbl{display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:var(--muted)}
+.cell p{margin:0;font-size:15px}
+.act{font-weight:600}
+.go{color:var(--good);font-weight:600;padding:0 2px}
+.ben{color:var(--ink)}
+.pain{background:var(--painbg);border-color:transparent}
+.pain .lbl{color:var(--pain)}
+.state{background:var(--goodbg);border-color:transparent}
+.state .lbl{color:var(--good)}
+.ref{display:inline-block;margin-top:8px;font-size:12.5px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 9px}
+.adv{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+.adv .box h3{font-size:17px;margin-bottom:6px}
+.adv .box p{color:var(--ink)}
+.note{margin-top:18px;padding:14px 18px;border:1px dashed var(--pain);border-radius:10px;font-size:15px}
+h2.sec{font-size:20px;margin-top:34px}
+.foot{margin-top:28px;color:var(--muted);font-size:13px}
+@media (max-width:900px){.map{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){body{padding:20px 14px 40px}.persona,.adv,.map{grid-template-columns:1fr}.stage{display:flex;flex-direction:column;grid-row:auto}.stage + .stage{margin-top:8px}.curve .tag{font-size:11px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>Priya’s future-state journey map</h1>
+<p class="lede">How human-led curation turns 15,000 titles into something Priya actually wants to watch, and brings her back from the DVD shelf.</p>
+</header>
+
+<section class="persona" aria-label="Persona and strategy">
+<div class="box">
+<h2>Priya, the overwhelmed browser</h2>
+<p><b>Role:</b> 34-year-old heavy viewer and 14-year subscriber.</p>
+<p><b>Goal:</b> Find something she genuinely wants to watch without having to hunt for it.</p>
+<blockquote>“I open the app, scroll for like twenty minutes, and close it without watching anything. There’s 15,000 titles but nothing I actually want. I ended up going back to a DVD.” <span style="color:var(--muted);font-size:13px">UXR-01</span></blockquote>
+</div>
+<div class="box">
+<h2>Initiative</h2>
+<p><b>Strategy:</b> Restore brand authority and win back users by prioritizing human-led curation and restoration over mass-market scale.</p>
+<p><b>Value proposition:</b> Transform 15,000 titles into a curated entertainment experience through personalised, high-quality recommendations that help users discover what they love, faster.</p>
+</div>
+</section>
+
+<div class="curvehead"><h2>Emotional arc</h2><span>Today: frustration and DVD retreat. Future: trust and return.</span></div>
+<div class="curve" role="img" aria-label="Emotion rises from frustrated today, to hopeful, understood, confident, and satisfied across the four stages.">
+<svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+<polyline points="3,82 12.5,58 37.5,40 62.5,24 87.5,10" fill="none" stroke="var(--good)" stroke-width="2.5" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+</svg>
+<span class="dot now" style="left:3%;top:82%"></span><span class="tag now" style="left:3%;top:82%">Today: frustrated</span>
+<span class="dot" style="left:12.5%;top:58%"></span><span class="tag" style="left:12.5%;top:58%">Hopeful</span>
+<span class="dot" style="left:37.5%;top:40%"></span><span class="tag" style="left:37.5%;top:40%">Understood</span>
+<span class="dot" style="left:62.5%;top:24%"></span><span class="tag" style="left:62.5%;top:24%">Confident</span>
+<span class="dot" style="left:87.5%;top:10%"></span><span class="tag" style="left:87.5%;top:10%">Satisfied</span>
+</div>
+
+<h2 class="sec">Four stages</h2>
+<main class="map">
+
+<article class="stage">
+<div class="cell head"><h3>1. Arrive</h3><p class="sub">A curated “Tonight” pick</p></div>
+<div class="cell"><span class="lbl">User action</span><p><span class="act">Opens app to one curated “Tonight” pick</span> <span class="go">→</span> <span class="ben">skips the twenty-minute scroll.</span></p></div>
+<div class="cell state"><span class="lbl">Internal state</span><p><span class="act">Feels hopeful but wary</span> <span class="go">→</span> <span class="ben">a human-chosen start earns another chance.</span></p></div>
+<div class="cell pain"><span class="lbl">Pain point addressed</span><p><span class="act">Replaces aimless scrolling</span> <span class="go">→</span> <span class="ben">the first session ends with something chosen.</span></p><span class="ref">UXR-01</span></div>
+</article>
+
+<article class="stage">
+<div class="cell head"><h3>2. Narrow</h3><p class="sub">Browse by mood</p></div>
+<div class="cell"><span class="lbl">User action</span><p><span class="act">Picks a mood like “quiet Sunday”</span> <span class="go">→</span> <span class="ben">sees a short, relevant shelf.</span></p></div>
+<div class="cell state"><span class="lbl">Internal state</span><p><span class="act">Feels understood</span> <span class="go">→</span> <span class="ben">stops second-guessing every thumbnail.</span></p></div>
+<div class="cell pain"><span class="lbl">Pain point addressed</span><p><span class="act">Adds mood browsing and descriptive search</span> <span class="go">→</span> <span class="ben">ends choice overload.</span></p><span class="ref">UXR-09 · BUG-1080</span></div>
+</article>
+
+<article class="stage">
+<div class="cell head"><h3>3. Trust</h3><p class="sub">A curator’s note</p></div>
+<div class="cell"><span class="lbl">User action</span><p><span class="act">Reads a curator’s note on a hidden gem</span> <span class="go">→</span> <span class="ben">gains confidence to press play.</span></p></div>
+<div class="cell state"><span class="lbl">Internal state</span><p><span class="act">Feels someone with taste chose this</span> <span class="go">→</span> <span class="ben">algorithm distrust fades.</span></p></div>
+<div class="cell pain"><span class="lbl">Pain point addressed</span><p><span class="act">Replaces franchise-clone rows</span> <span class="go">→</span> <span class="ben">picks feel varied and personal.</span></p><span class="ref">UXR-02 · BUG-1091</span></div>
+</article>
+
+<article class="stage">
+<div class="cell head"><h3>4. Watch</h3><p class="sub">Resume anywhere</p></div>
+<div class="cell"><span class="lbl">User action</span><p><span class="act">Watches within minutes, resumes on any device</span> <span class="go">→</span> <span class="ben">finishes what she starts.</span></p></div>
+<div class="cell state"><span class="lbl">Internal state</span><p><span class="act">Feels her evening was well spent</span> <span class="go">→</span> <span class="ben">the app is her first stop again.</span></p></div>
+<div class="cell pain"><span class="lbl">Pain point addressed</span><p><span class="act">Eliminates zero-watch sessions</span> <span class="go">→</span> <span class="ben">the DVD retreat loses its reason.</span></p><span class="ref">UXR-01 · BUG-1061</span></div>
+</article>
+
+</main>
+
+<div class="note"><b>Dependency:</b> Stage 4 holds only if resume-playback sync (BUG-1061) is fixed. A restart at 0:00 on another device could undo the trust built in Stages 1 to 3.</div>
+
+<h2 class="sec">Advantages over the DVD workaround</h2>
+<section class="adv">
+<div class="box"><h3>Fresh discovery</h3><p><span class="act">Surfaces new curated gems regularly</span> <span class="go">→</span> her “shelf” never goes stale.</p></div>
+<div class="box"><h3>Instant, portable access</h3><p><span class="act">One tap on any device</span> <span class="go">→</span> no discs, no hunting.</p></div>
+<div class="box"><h3>Human taste at catalog scale</h3><p><span class="act">Curators vet 15,000 titles</span> <span class="go">→</span> breadth with a shelf’s confidence.</p></div>
+</section>
+
+<p class="foot">Sources: UXR-01, UXR-02, UXR-09; BUG-1061, BUG-1080, BUG-1091. Stage content is a proposed future state; emotional arc values are illustrative, not measured.</p>
+</div>
+</body>
+</html>
